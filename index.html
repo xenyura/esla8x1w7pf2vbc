@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My life</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500&family=Dosis:wght@300;400;600&family=Merriweather:wght@400;700&family=Playfair+Display:wght@400;600;700&family=Dancing+Script:wght@400;600&family=Caveat:wght@400;600&family=Pacifico&family=Lobster&family=Satisfy&family=Amatic+SC:wght@400;700&family=Montserrat:wght@500&family=Nunito:wght@600&family=Quicksand:wght@600&family=Raleway:wght@500&family=Lato:wght@400&family=Open+Sans:wght@500&family=Inter:wght@500&family=Josefin+Sans:wght@500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#171c3a">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+</head>
+<body>
+<div id="app">
+
+  <div id="scroll">
+  <!-- BAGIAN 1: BANNER -->
+  <header id="banner">
+    <div id="sky" aria-hidden="true"><div class="sk-img"></div><div class="sk-stars"></div><div class="cel" id="cel"></div><div class="sk-top"></div><div class="sk-lights"></div><div class="sk-glow"></div></div>
+    <div class="top">
+    <div class="ava" id="avaBtn"><span><img id="avatar" alt="Foto profil" referrerpolicy="no-referrer"></span></div>
+    <div class="hello">
+      <div class="hrow"><div class="pill" id="greet">Selamat Malam</div><div class="emo" id="emo">🌙</div></div>
+      <div class="name"><span class="wave">👋</span> <b id="uname">Tuan edi</b>!</div>
+    </div>
+    </div>
+    <!-- EDIT PROFIL: ketuk 3x foto profil untuk membuka, ketuk 1x di luar kotak untuk mengunci -->
+    <div class="pedit" id="pedit" hidden>
+      <label for="pName">Nama</label>
+      <input class="inp" id="pName" placeholder="Nama kamu" autocomplete="off">
+      <label for="pUrl">Link foto (IMGBB atau sejenisnya)</label>
+      <input class="inp" id="pUrl" type="url" inputmode="url" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="https://i.ibb.co/xxxx/foto.jpg">
+      <div class="prow"><button type="button" class="pbtn" id="pGal">📁 Dari galeri</button><button type="button" class="pbtn" id="pDef">↺ Foto bawaan</button></div>
+      <small id="pMsg">Ketuk di luar kotak untuk mengunci</small>
+    </div>
+    <div class="wel"><span class="wt">Welcome</span><b class="wy" id="welYear">2026</b></div>
+    <div class="clockrow">
+      <svg class="clock" viewBox="-10 -10 140 140">
+        <circle class="face" cx="60" cy="60" r="58"/>
+        <g id="ems"></g>
+        <g id="nums"></g>
+        <g id="ticks"></g>
+        <line class="h" id="hh" x1="60" y1="60" x2="60" y2="36"/>
+        <line class="m" id="mm" x1="60" y1="60" x2="60" y2="24"/>
+        <line class="s" id="ss" x1="60" y1="68" x2="60" y2="16"/>
+        <circle class="dot" cx="60" cy="60" r="3.5"/>
+      </svg>
+      <div class="digi"><div class="sisa"><span>00.00</span><em id="sH"></em><span>Minggu</span><em id="sM"></em><span id="sBl">Januari</span><em id="sB"></em><span id="sTl">2027</span><em id="sT"></em></div><b id="dg">00:00</b><small id="dt"><i class="cico" id="dtn"></i><span id="dtx"></span></small></div>
+    </div>
+    <div class="catbox" id="catBox"></div>
+    <div class="qwrap" id="qwrap">
+      <div class="qcard">
+        <textarea class="qbox" id="qbox" readonly spellcheck="false" placeholder="Ketuk 3x untuk menulis quotes…"></textarea>
+      </div>
+      <div class="qtools">
+        <small>Ketuk di luar kotak untuk mengunci</small>
+        <div class="qal">
+          <button data-al="left" aria-label="Rata kiri"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h11M3 18h15"/></svg></button>
+          <button data-al="center" aria-label="Rata tengah"><svg viewBox="0 0 24 24"><path d="M3 6h18M7 12h10M5 18h14"/></svg></button>
+          <button data-al="right" aria-label="Rata kanan"><svg viewBox="0 0 24 24"><path d="M3 6h18M10 12h11M6 18h15"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BAGIAN 2: BODY -->
+  <main id="body">
+    <section class="page active" id="beranda">
+      <h2>Beranda</h2>
+      <!-- KARTU SEMANGAT: pajang gambar 16:9, geser ke samping. Ketuk 3x = mode edit, ketuk 1x di luar = kunci -->
+      <div class="card card169" id="kartuSemangat" aria-label="Kartu Semangat"><div class="ks-track" id="ksTrack"></div><div class="ks-dots" id="ksDots"></div></div>
+      <div class="kpanel" id="kPanel" hidden>
+        <div class="kp-add"><input class="inp" id="kUrl" type="url" inputmode="url" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="Link gambar (IMGBB dll.)"><button type="button" class="pbtn" id="kUrlBtn">＋ Tambah</button></div>
+        <button type="button" class="pbtn kwide" id="kGal">📁 Tambah dari galeri</button>
+        <div class="kp-thumbs" id="kThumbs"></div>
+        <small id="kMsg">Ketuk di luar kotak untuk mengunci</small>
+      </div>
+      <input type="file" id="kFile" accept="image/*" multiple hidden>
+      <!-- AREA IMPIAN: tinggi = setengah kartu semangat. Ketuk 3x = tambah/edit teks, ketuk 1x di luar = kunci -->
+      <div class="impwrap" id="impWrap">
+        <div class="impcard"><textarea class="impbox" id="impBox" readonly spellcheck="false"></textarea></div>
+        <div class="imptools">
+          <div class="impal">
+            <button type="button" data-al="left" aria-label="Rata kiri"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h11M3 18h15"/></svg></button>
+            <button type="button" data-al="center" aria-label="Rata tengah"><svg viewBox="0 0 24 24"><path d="M3 6h18M7 12h10M5 18h14"/></svg></button>
+            <button type="button" data-al="right" aria-label="Rata kanan"><svg viewBox="0 0 24 24"><path d="M3 6h18M10 12h11M6 18h15"/></svg></button>
+          </div>
+          <select class="impfont" id="impFont" aria-label="Pilih font"></select>
+        </div>
+      </div>
+      <!-- DUA KOTAK: tinggi tiap kotak = 1/3 kartu semangat. Ketuk 3x di salah satu kotak = edit, ketuk 1x di luar = kunci -->
+      <div class="dk-wrap" id="dkWrap">
+        <div class="dk-row"><div class="dk-in">
+          <div class="dk-box">
+            <input class="dk-emo" placeholder="✨" aria-label="Emoji kotak kiri" autocomplete="off" spellcheck="false" readonly tabindex="-1">
+            <input class="dk-badge" placeholder="Teks" aria-label="Teks kecil kotak kiri" autocomplete="off" spellcheck="false" readonly tabindex="-1">
+          </div>
+          <div class="dk-box dk-b2">
+            <input class="dk-emo" placeholder="✨" aria-label="Emoji kotak kanan" autocomplete="off" spellcheck="false" readonly tabindex="-1">
+            <input class="dk-badge" placeholder="Teks" aria-label="Teks kecil kotak kanan" autocomplete="off" spellcheck="false" readonly tabindex="-1">
+          </div>
+        </div></div>
+        <div class="dk-titles">
+          <input class="dk-title" placeholder="Judul kiri" aria-label="Judul kotak kiri" autocomplete="off" spellcheck="false" readonly tabindex="-1">
+          <input class="dk-title" placeholder="Judul kanan" aria-label="Judul kotak kanan" autocomplete="off" spellcheck="false" readonly tabindex="-1">
+        </div>
+        <div class="dk-rantau" id="dkRantau"></div>
+        <div class="dk-tools">
+          <div class="dk-trow">
+            <small>Perantauan</small>
+            <input class="dk-remo" id="dkREmo" placeholder="🧳" aria-label="Emoji perantauan" autocomplete="off" spellcheck="false">
+            <input class="dk-date" id="dkRDate" type="date" aria-label="Tanggal mulai merantau">
+          </div>
+          <small id="dkMsg">Ketuk di luar kotak untuk mengunci</small>
+        </div>
+      </div>
+      <!-- SEDANG DITEMANI: 1 pil judul + 5 pil pilihan. Ketuk 3x pil judul = mode edit (judul bisa ditulis, pilihan dipilih dengan ketuk 2x), ketuk 1x di luar = kunci -->
+      <div class="tm-wrap" id="tmWrap">
+        <div class="tm-title" id="tmTitleBox"><input class="tm-input" id="tmTitle" placeholder="Sedang ditemani" aria-label="Judul sedang ditemani" autocomplete="off" spellcheck="false" readonly tabindex="-1"></div>
+        <div class="tm-opts" role="group" aria-label="Sedang ditemani siapa">
+          <button type="button" class="tm-opt" data-k="sendiri" style="--cr:127,140,255" tabindex="-1" aria-pressed="false"><span class="tm-e">🧍</span><span class="tm-t">Sendiri</span></button>
+          <button type="button" class="tm-opt" data-k="keluarga" style="--cr:255,167,38" tabindex="-1" aria-pressed="false"><span class="tm-e">👨‍👩‍👧</span><span class="tm-t">Keluarga</span></button>
+          <button type="button" class="tm-opt" data-k="pasangan" style="--cr:255,105,180" tabindex="-1" aria-pressed="false"><span class="tm-e">💞</span><span class="tm-t">Pasangan</span></button>
+          <button type="button" class="tm-opt" data-k="teman" style="--cr:79,209,197" tabindex="-1" aria-pressed="false"><span class="tm-e">🤝</span><span class="tm-t">Teman</span></button>
+          <button type="button" class="tm-opt" data-k="sahabat" style="--cr:250,204,21" tabindex="-1" aria-pressed="false"><span class="tm-e">🫂</span><span class="tm-t">Sahabat</span></button>
+        </div>
+        <small class="tm-hint">Ketuk 2x pada pil untuk memilih · ketuk di luar untuk mengunci</small>
+      </div>
+      <!-- KARTU PETA: 6 kotak terpisah (3x2), tiap kotak punya gambar sendiri (geser ke samping = gambar lain). Ketuk 1x = gambar besar, ketuk 3x = edit kotak itu, ketuk 1x di luar = kunci -->
+      <div class="pk-grid" id="kartuPeta" aria-label="Kartu Peta"></div>
+      <div class="kpanel" id="petaPanel" hidden>
+        <b class="kp-judul" id="petaJudul">Kotak 1</b>
+        <div class="kp-add"><input class="inp" id="petaUrl" type="url" inputmode="url" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="Link gambar (IMGBB dll.)"><button type="button" class="pbtn" id="petaUrlBtn">＋ Tambah</button></div>
+        <button type="button" class="pbtn kwide" id="petaGal">📁 Tambah dari galeri</button>
+        <div class="kp-thumbs" id="petaThumbs"></div>
+        <small id="petaMsg">Ketuk di luar kotak untuk mengunci</small>
+      </div>
+      <input type="file" id="petaFile" accept="image/*" multiple hidden>
+      <!-- KARTU VIDEO: 4 kotak (2x2), lebar = kartu semangat, total tinggi ~9:16. Tiap kotak bisa banyak video (geser ke samping). Ketuk 1x = putar layar penuh, ketuk 3x = edit kotak itu, ketuk 1x di luar = kunci -->
+      <div class="vk-grid" id="kartuVideo" aria-label="Kartu Video"></div>
+      <div class="kpanel" id="videoPanel" hidden>
+        <b class="kp-judul" id="videoJudul">Kotak 1</b>
+        <div class="kp-add"><input class="inp" id="videoUrl" type="url" inputmode="url" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="Link video langsung (.mp4 / .webm)"><button type="button" class="pbtn" id="videoUrlBtn">＋ Tambah</button></div>
+        <button type="button" class="pbtn kwide" id="videoGal">🎬 Tambah dari galeri</button>
+        <div class="kp-thumbs" id="videoThumbs"></div>
+        <small id="videoMsg">Ketuk di luar kotak untuk mengunci</small>
+      </div>
+      <input type="file" id="videoFile" accept="video/*" multiple hidden>
+    </section>
+
+    <section class="page" id="energy">
+      <h2>Energy</h2>
+      <!-- PIL PILIHAN: kiri = Keuangan, kanan = Grafik -->
+      <div class="epill" id="ePill" role="tablist" data-sel="0">
+        <i class="ethumb"></i>
+        <button type="button" role="tab" class="on" data-e="keu" aria-selected="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H18a1 1 0 0 1 1 1v2"/><path d="M3 7.5V18a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H5.5A2.5 2.5 0 0 1 3 5.5"/><circle cx="16.5" cy="13.5" r="1.2"/></svg>Keuangan</button>
+        <button type="button" role="tab" data-e="grafik" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V4"/><path d="M4 20h16"/><path d="M8 16v-4M12 16V8M16 16v-6"/></svg>Grafik</button>
+      </div>
+      <div class="epanel" id="eKeu">
+        <!-- KARTU SALDO (desain). Nilai diisi lewat setSaldo(saldo, pemasukan, pengeluaran) di app.js -->
+        <div class="saldo" id="saldoCard">
+          <div class="sd-top">
+            <span class="sd-lbl">Total saldo</span>
+            <button type="button" class="sd-eye" id="sdEye" aria-label="Tampilkan atau sembunyikan saldo"><span class="e-buka"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><span class="e-tutup"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l18 18"/><path d="M10.6 6.1A10 10 0 0 1 12 6c6.4 0 10 6 10 6a17 17 0 0 1-3.2 3.9M6.5 7.6C3.8 9.3 2 12 2 12s3.6 7 10 7c1.5 0 2.8-.3 4-.8"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg></span></button>
+          </div>
+          <div class="sd-amt"><span class="sd-rp">Rp</span><b id="sdVal">0</b></div>
+          <div class="sd-row">
+            <div class="sd-pill in"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></i><div><small>Pemasukan</small><b id="sdIn">Rp 0</b></div></div>
+            <div class="sd-pill out"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></i><div><small>Pengeluaran</small><b id="sdOut">Rp 0</b></div></div>
+          </div>
+        </div>
+        <button type="button" class="eadd" id="eAdd" aria-label="Tambah pemasukan atau pengeluaran"><span class="ea-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <!-- HUTANG: pil Hutang orang | Hutang aku. Kotak pertama = tombol + (isi kotak baru). Ketuk 3x kotak = ubah / hapus -->
+        <section class="ht-wrap" id="htWrap" data-t="orang" aria-label="Hutang">
+          <h3 class="ht-title">Hutang</h3>
+          <div class="epill" id="htPill" role="tablist" data-sel="0">
+            <i class="ethumb"></i>
+            <button type="button" role="tab" class="on" data-h="orang" aria-selected="true">Hutang orang</button>
+            <button type="button" role="tab" data-h="aku" aria-selected="false">Hutang aku</button>
+          </div>
+          <div class="ht-tot"><span id="htTL">Total hutang orang</span><b id="htTV">Rp 0</b></div>
+          <div class="ht-grid" id="htGrid"></div>
+        </section>
+        <!-- ANGGARAN: 5 kotak siap tulis + kotak ke-6 (tambah kotak). Ketuk 1x = halaman anggaran, ketuk 3x = ubah ikon & judul, ketuk di luar = kunci -->
+        <section class="ang-wrap" id="angWrap" aria-label="Anggaran">
+          <h3 class="ang-title">Anggaran</h3>
+          <div class="pk-grid" id="angGrid"></div>
+          <div class="kpanel ang-panel" id="angPanel" hidden>
+            <b class="kp-judul" id="angPJudul">Ubah kotak</b>
+            <input class="inp" id="angNama" placeholder="Judul anggaran" autocomplete="off" aria-label="Judul anggaran">
+            <div class="emojis" id="angEmo"></div>
+            <input class="inp" id="angEmoIn" placeholder="atau ketik emoji sendiri" autocomplete="off">
+            <button type="button" class="pbtn kwide ang-del" id="angDel">🗑️ Hapus kotak</button>
+            <small>Ketuk di luar kotak untuk mengunci</small>
+          </div>
+        </section>
+        <!-- RIWAYAT TRANSAKSI: cari (catatan, kategori, tanggal, jam). Ketuk 3x transaksi = buka halaman edit/hapus -->
+        <section class="rw-wrap" id="rwWrap" aria-label="Riwayat transaksi">
+          <h3 class="rw-title">Riwayat transaksi</h3>
+          <div class="rw-search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+            <input class="inp" id="rwQ" type="search" enterkeyhint="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Cari catatan, kategori, tgl, jam…" aria-label="Cari transaksi">
+            <button type="button" class="rw-clr" id="rwClr" aria-label="Hapus pencarian" hidden>✕</button>
+          </div>
+          <div class="rw-head" id="rwHead"></div>
+          <div class="rw-list" id="rwList"></div>
+          <button type="button" class="rw-more" id="rwMore" hidden><span>Lihat transaksi lainnya</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></button>
+        </section>
+      </div>
+      <div class="epanel" id="eGrafik">
+        <!-- GRAFIK ARUS KEUANGAN: harian / mingguan / bulanan / tahunan (+ pilih bulan), donat per kategori, bar kategori -->
+        <div class="gf">
+          <!-- GRAFIK BATANG: pemasukan vs pengeluaran. Harian = 7 hari sampai tanggal terpilih, Mingguan = 7 hari dalam minggu itu, Bulanan = tiap tanggal, Tahunan = 12 bulan. Ketuk batang untuk membaca nilainya -->
+          <section class="gb" id="gbBox" aria-label="Grafik batang pemasukan dan pengeluaran">
+            <div class="gb-head">
+              <h4>Grafik batang</h4>
+              <!-- PEMILIH PERIODE: panah = bulan (atau tahun) sebelumnya/berikutnya yang ada transaksi, label = buka pilihan tahun & bulan -->
+              <div class="gb-nav" role="group" aria-label="Pilih bulan dan tahun">
+                <button type="button" class="gb-n" id="gbPrev" aria-label="Sebelumnya yang ada transaksi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+                <button type="button" class="gb-lbl" id="gbLbl" aria-label="Pilih bulan dan tahun"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span id="gbLblT"></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+                <button type="button" class="gb-n" id="gbNext" aria-label="Berikutnya yang ada transaksi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+              </div>
+            </div>
+            <div class="gb-read" id="gbRead">
+              <div class="gb-when"><span id="gbWhen"></span><span id="gbNet"></span></div>
+              <div class="gb-card in"><small><i></i>Pemasukan</small><b id="gbIn">Rp 0</b></div>
+              <div class="gb-card out"><small><i></i>Pengeluaran</small><b id="gbOut">Rp 0</b></div>
+            </div>
+            <div class="gb-chart" id="gbChart" role="group" aria-label="Batang per periode"></div>
+            <div class="gf-empty gb-empty" id="gbEmpty" hidden>Belum ada transaksi di periode ini.</div>
+            <small class="gb-hint" id="gbHint">Ketuk batang untuk membaca nilainya</small>
+          </section>
+          <div class="gf-seg" id="gfMode" role="tablist" aria-label="Periode">
+            <button type="button" data-m="hari">Harian</button><button type="button" data-m="minggu">Mingguan</button><button type="button" data-m="bulan">Bulanan</button><button type="button" data-m="tahun">Tahunan</button>
+          </div>
+          <div class="gf-nav">
+            <button type="button" id="gfPrev" aria-label="Sebelumnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+            <button type="button" class="gf-lbl" id="gfLbl" aria-label="Pilih tahun dan bulan"><span id="gfLblT"></span></button>
+            <button type="button" id="gfNext" aria-label="Berikutnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+          </div>
+          <div class="gf-months" id="gfMonths" hidden></div>
+          <div class="gf-flow">
+            <div><small>Pemasukan</small><b id="gfIn">Rp 0</b></div>
+            <div><small>Pengeluaran</small><b id="gfOut">Rp 0</b></div>
+            <div><small>Selisih</small><b id="gfNet">Rp 0</b></div>
+          </div>
+          <div class="gf-type" id="gfType"><button type="button" data-t="keluar">Pengeluaran</button><button type="button" data-t="masuk">Pemasukan</button></div>
+          <div class="gf-donut">
+            <svg id="gfSvg" viewBox="0 0 200 200" aria-hidden="true"></svg>
+            <div class="gf-center"><small id="gfCLbl"></small><b id="gfCVal"></b></div>
+          </div>
+          <div class="gf-legend" id="gfLegend"></div>
+          <div class="gf-bars" id="gfBars"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="produktif">
+      <h2>Produktif</h2>
+      <!-- PIL PILIHAN: kiri = Produktivitas, kanan = Grafik (desain sama dengan pil Energy) -->
+      <div class="epill" id="pPill" role="tablist" data-sel="0">
+        <i class="ethumb"></i>
+        <button type="button" role="tab" class="on" data-p="prod" aria-selected="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.6 18.4a9 9 0 1 1 12.8 0"/><path d="M12 12l4.2-4.2"/><circle cx="12" cy="12" r="1.2"/></svg>Produktivitas</button>
+        <button type="button" role="tab" data-p="grafik" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V4"/><path d="M4 20h16"/><path d="M8 16v-4M12 16V8M16 16v-6"/></svg>Grafik</button>
+      </div>
+      <div class="epanel" id="pProd">
+        <!-- KARTU TIKET PRODUKTIVITAS (desain). Nilai diisi lewat setTiket(saldo, pengisian, pemakaian) di js/app.js. Sistem tiket menyusul, terpisah dari catatan uang -->
+        <div class="saldo tiket-card" id="tiketCard">
+          <div class="tk-title"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/><path d="M13 5v2M13 11v2M13 17v2"/></svg><span>Tiket Tersedia</span></div>
+          <div class="tk-bln" id="tkBln"></div>
+          <div class="sd-amt"><b id="tkVal">0</b><span class="sd-rp">tiket</span></div>
+          <div class="sd-row">
+            <div class="sd-pill out"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></i><div><small>Pemakaian</small><b id="tkOut">0 tiket</b></div></div>
+          </div>
+        </div>
+        <!-- TOMBOL +: buka halaman transaksi tiket (Pakai tiket) -->
+        <button type="button" class="eadd" id="tAdd" aria-label="Transaksi tiket"><span class="ea-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <!-- TUGAS: 5 kotak siap tulis + kotak ke-6 (tambah kotak). Ketuk 1x = halaman tugas, ketuk 3x = ubah ikon & judul, ketuk di luar = kunci -->
+        <section class="ang-wrap tg-wrap" id="tgWrap" aria-label="Tugas">
+          <h3 class="ang-title">Tugas</h3>
+          <div class="pk-grid" id="tgGrid"></div>
+          <div class="kpanel ang-panel" id="tgPanel" hidden>
+            <b class="kp-judul" id="tgPJudul">Ubah kotak</b>
+            <input class="inp" id="tgNama" placeholder="Judul tugas" autocomplete="off" aria-label="Judul tugas">
+            <div class="emojis" id="tgEmo"></div>
+            <input class="inp" id="tgEmoIn" placeholder="atau ketik emoji sendiri" autocomplete="off">
+            <button type="button" class="pbtn kwide ang-del" id="tgDel">🗑️ Hapus kotak</button>
+            <small>Ketuk di luar kotak untuk mengunci</small>
+          </div>
+        </section>
+        <!-- RIWAYAT PEMAKAIAN TIKET: cari (pekerjaan, kategori, standar, bukti, tujuan, tgl, jam). Ketuk 3x = ubah / hapus -->
+        <section class="rw-wrap" id="tkRwWrap" aria-label="Riwayat pemakaian tiket">
+          <h3 class="rw-title">Riwayat pemakaian</h3>
+          <div class="rw-search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+            <input class="inp" id="tkRwQ" type="search" enterkeyhint="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Cari pekerjaan, kategori, tgl, jam…" aria-label="Cari pemakaian tiket">
+            <button type="button" class="rw-clr" id="tkRwClr" aria-label="Hapus pencarian" hidden>✕</button>
+          </div>
+          <div class="rw-head" id="tkRwHead"></div>
+          <div class="rw-list" id="tkRwList"></div>
+          <button type="button" class="rw-more" id="tkRwMore" hidden><span>Lihat pemakaian lainnya</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></button>
+        </section>
+      </div>
+      <div class="epanel" id="pGrafik">
+        <!-- GRAFIK TIKET: harian / mingguan / bulanan / tahunan (+ pilih bulan), donat per kategori, bar tiap kategori + asal tiket (kartu tiket / tugas) -->
+        <div class="gf">
+          <!-- GRAFIK BATANG: tiket dari kartu tiket langsung vs dari tugas. Harian = 7 hari sampai tanggal terpilih, Mingguan = 7 hari dalam minggu itu, Bulanan = tiap tanggal, Tahunan = 12 bulan. Ketuk batang untuk membaca nilainya -->
+          <section class="gb" id="pbBox" aria-label="Grafik batang pemakaian tiket">
+            <div class="gb-head">
+              <h4>Grafik batang</h4>
+              <div class="gb-nav" role="group" aria-label="Pilih bulan dan tahun">
+                <button type="button" class="gb-n" id="pbPrev" aria-label="Sebelumnya yang ada pemakaian"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+                <button type="button" class="gb-lbl" id="pbLbl" aria-label="Pilih bulan dan tahun"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span id="pbLblT"></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+                <button type="button" class="gb-n" id="pbNext" aria-label="Berikutnya yang ada pemakaian"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+              </div>
+            </div>
+            <div class="gb-read" id="pbRead">
+              <div class="gb-when"><span id="pbWhen"></span><span id="pbNet"></span></div>
+              <div class="gb-card in"><small><i></i>Kartu tiket</small><b id="pbIn">0 tiket</b></div>
+              <div class="gb-card out"><small><i></i>Tugas</small><b id="pbOut">0 tiket</b></div>
+            </div>
+            <div class="gb-chart" id="pbChart" role="group" aria-label="Batang per periode"></div>
+            <div class="gf-empty gb-empty" id="pbEmpty" hidden>Belum ada pemakaian tiket di periode ini.</div>
+            <small class="gb-hint" id="pbHint">Ketuk batang untuk membaca nilainya</small>
+          </section>
+          <div class="gf-seg" id="pgMode" role="tablist" aria-label="Periode">
+            <button type="button" data-m="hari">Harian</button><button type="button" data-m="minggu">Mingguan</button><button type="button" data-m="bulan">Bulanan</button><button type="button" data-m="tahun">Tahunan</button>
+          </div>
+          <div class="gf-nav">
+            <button type="button" id="pgPrev" aria-label="Sebelumnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+            <button type="button" class="gf-lbl" id="pgLbl" aria-label="Pilih tahun dan bulan"><span id="pgLblT"></span></button>
+            <button type="button" id="pgNext" aria-label="Berikutnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+          </div>
+          <div class="gf-months" id="pgMonths" hidden></div>
+          <div class="gf-flow">
+            <div><small>Tiket keluar</small><b id="pgTot">0 tiket</b></div>
+            <div><small>Kartu tiket</small><b id="pgKartu">0 tiket</b></div>
+            <div><small>Tugas</small><b id="pgTugas">0 tiket</b></div>
+          </div>
+          <div class="gf-type" id="pgType"><button type="button" data-t="semua">Semua</button><button type="button" data-t="kartu">Kartu tiket</button><button type="button" data-t="tugas">Tugas</button></div>
+          <div class="gf-donut">
+            <svg id="pgSvg" viewBox="0 0 200 200" aria-hidden="true"></svg>
+            <div class="gf-center"><small id="pgCLbl"></small><b id="pgCVal"></b></div>
+          </div>
+          <div class="gf-legend" id="pgLegend"></div>
+          <div class="gf-bars" id="pgBars"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="galery">
+      <h2>Galery</h2>
+      <!-- KENALI AKU: foto profil, nama, badge keahlian, deskripsi. Ketuk 3x foto/nama = edit (foto, nama), ketuk 1x di luar = kunci. Deskripsi: ketuk 3x = edit, ketuk 1x di luar = kunci. Badge: tombol + = tambah, ketuk 1x = catatan, ketuk 3x = ubah/hapus badge. Data: 'kenali', 'kenali_badge', 'kn_cat_<id>' -->
+      <section class="kn-wrap" id="knWrap" aria-label="Kenali aku">
+        <div class="kn-card" id="knCard">
+          <div class="kn-prof" id="knProf">
+            <div class="kn-ava kosong" id="knAva"><span><img id="knImg" alt="Foto profil" draggable="false" referrerpolicy="no-referrer"><i class="kn-ph" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4 20c1.2-4 4.2-6 8-6s6.8 2 8 6"/></svg></i></span></div>
+            <div class="kn-nm">
+              <textarea class="kn-name" id="knName" rows="1" placeholder="Nama" aria-label="Nama" autocomplete="off" spellcheck="false" readonly tabindex="-1"></textarea>
+              <div class="kn-orn" aria-hidden="true"><i></i><u></u><b></b><u></u><i></i></div>
+            </div>
+          </div>
+          <div class="kn-badges" id="knBadges"></div>
+          <div class="kn-dw" id="knDw"><textarea class="kn-desc" id="knDesc" rows="1" readonly tabindex="-1" placeholder="Penjelasan singkat · ketuk 3x untuk menulis" aria-label="Deskripsi"></textarea></div>
+          <small class="kn-hint" id="knHint">Ketuk di luar kotak untuk mengunci</small>
+        </div>
+        <div class="kpanel" id="knPanel" hidden>
+          <b class="kp-judul">Foto profil</b>
+          <div class="kp-add"><input class="inp" id="knUrl" type="url" inputmode="url" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="Link foto (IMGBB dll.)"><button type="button" class="pbtn" id="knUrlBtn">＋ Pakai</button></div>
+          <button type="button" class="pbtn kwide" id="knGal">📁 Foto dari galeri</button>
+          <button type="button" class="pbtn kwide gl-del" id="knDelFoto" hidden>🗑️ Hapus foto</button>
+          <small id="knMsg">Ketuk di luar kotak untuk mengunci</small>
+        </div>
+        <input type="file" id="knFile" accept="image/*" hidden>
+      </section>
+      <!-- GALERY: 8 kotak (3 per baris). Tiap kotak = cover + judul + deskripsi kecil. Ketuk 1x = halaman dalam, ketuk 3x = edit kotak itu (cover, judul, deskripsi), ketuk 1x di luar = kunci -->
+      <div class="gl-grid" id="galGrid" aria-label="Galery"></div>
+      <div class="kpanel" id="galPanel" hidden>
+        <b class="kp-judul" id="galPJudul">Kotak 1</b>
+        <div class="gl-f">
+          <input class="inp" id="galT" placeholder="Judul" autocomplete="off" aria-label="Judul kotak">
+          <input class="inp" id="galD" placeholder="Deskripsi kecil" autocomplete="off" aria-label="Deskripsi kecil kotak">
+          <div class="kp-add"><input class="inp" id="galUrl" type="url" inputmode="url" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="Link cover (IMGBB dll.)"><button type="button" class="pbtn" id="galUrlBtn">＋ Pakai</button></div>
+          <button type="button" class="pbtn kwide" id="galGal">📁 Cover dari galeri</button>
+          <button type="button" class="pbtn kwide gl-del" id="galDelCv" hidden>🗑️ Hapus cover</button>
+        </div>
+        <small id="galMsg">Ketuk di luar kotak untuk mengunci</small>
+      </div>
+      <input type="file" id="galFile" accept="image/*" hidden>
+    </section>
+
+    <section class="page" id="pengaturan">
+      <h2>Pengaturan</h2>
+      <!-- LOGIN GOOGLE + CADANGAN DRIVE (folder tersembunyi khusus aplikasi). Logika: bagian "LOGIN GOOGLE" di js/app.js -->
+      <section class="gd" id="gd" aria-label="Masuk dengan Google">
+        <div class="gd-out" id="gdOut">
+          <div class="gd-aur"><i></i><i></i><i></i></div>
+          <div class="gd-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 9.5a4 4 0 0 1-.5 8.5z"/><path d="M12 11v6M9.5 13.5L12 11l2.5 2.5"/></svg></div>
+          <h3 class="gd-tt"><span class="gd-t1">Simpan hidupmu</span><span class="gd-t2">di mana pun</span></h3>
+                    <ul class="gd-ft"><li>☁️ Cadangan otomatis</li><li>🔒 Folder rahasia aplikasi</li><li>♻️ Pulih saat pasang ulang</li></ul>
+          <button type="button" class="gd-g" id="gdBtn"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg><span>Lanjutkan dengan Google</span><i class="sp"></i></button>
+                  </div>
+        <div class="gd-in" id="gdIn" hidden>
+          <div class="gd-aur"><i></i><i></i></div>
+          <div class="gd-pr"><div class="gd-av"><b id="gdAvL"></b><img id="gdAv" alt="" referrerpolicy="no-referrer" hidden></div><div><div class="gd-nm" id="gdNm"></div><div class="gd-em" id="gdEm"></div></div></div>
+          <div class="gd-st" id="gdSt" data-s="idle"><i></i><span id="gdStT">Belum dicadangkan</span></div>
+          <ul class="gd-info" id="gdInfo" aria-label="Informasi sinkronisasi">
+            <li><span>Terakhir tersinkron</span><b id="gdI1">—</b></li>
+            <li><span>Sinkron berikutnya</span><b id="gdI2">—</b></li>
+            <li><span>Status data</span><b id="gdI3">—</b></li>
+            <li><span>Koneksi Google</span><b id="gdI4">—</b></li>
+          </ul>
+          <div class="gd-ac"><button type="button" class="pri" id="gdSync">🔄 Sinkronkan</button><button type="button" id="gdRest">♻️ Pulihkan</button><button type="button" class="out" id="gdOutBtn">Keluar</button></div>
+        </div>
+      </section>
+      <input type="file" id="fotoInput" accept="image/*" hidden>
+    </section>
+  </main>
+
+  </div>
+
+  <!-- MENU -->
+  <nav id="nav">
+    <button data-page="beranda" class="active">
+      <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Beranda
+    </button>
+    <button data-page="energy">
+      <svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>Energy
+    </button>
+    <button data-page="produktif">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg>Produktif
+    </button>
+    <button data-page="galery">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>Galery
+    </button>
+    <button data-page="pengaturan">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>Pengaturan
+    </button>
+  </nav>
+</div>
+
+<!-- KALENDER TAHUNAN -->
+<div id="cal" hidden>
+  <div class="calbox">
+    <div class="calhead">
+      <button class="ibtn back" id="calClose" aria-label="Kembali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5"/><path d="M11.5 5.5L5 12l6.5 6.5"/></svg></button>
+      <h3 id="yTitle">2026</h3>
+      <button class="ibtn" id="yPrev" aria-label="Tahun sebelumnya">‹</button>
+      <button class="ibtn" id="yNext" aria-label="Tahun berikutnya">›</button>
+          </div>
+    <div class="ygrid" id="yGrid"></div>
+    <button class="fab" id="catAdd" aria-label="Tambah catatan"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+  </div>
+</div>
+
+<!-- CATATAN KALENDER -->
+<div id="catFull" hidden>
+  <div class="calbox">
+    <div class="calhead">
+      <h3>Catatan</h3>
+      <button class="ibtn" id="cfClose" aria-label="Tutup">✕</button>
+    </div>
+    <div class="almbody">
+      <div class="cfdate" id="cfDate"></div>
+      <div class="cftext" id="cfText"></div>
+    </div>
+    <div class="cfacts">
+      <button class="btn pri" id="cfEdit">Edit</button>
+      <button class="btn del2" id="cfDel">Hapus</button>
+    </div>
+  </div>
+</div>
+<div id="catEdit" hidden>
+  <div class="sheet">
+    <h3 id="ceTitle">Catatan baru</h3>
+    <small>Tanggal</small>
+    <input type="date" class="inp" id="ceDate">
+    <small>Catatan</small>
+    <textarea class="inp" id="ceText" rows="3" placeholder="Tulis catatan..."></textarea>
+    <div class="acts">
+      <button class="btn del" id="ceDel">Hapus</button>
+      <button class="btn" id="ceCancel">Batal</button>
+      <button class="btn pri" id="ceSave">Simpan</button>
+    </div>
+  </div>
+</div>
+
+<!-- ALARM -->
+<div id="alm" hidden>
+  <div class="calbox">
+    <div class="calhead">
+      <button class="ibtn back" id="almClose" aria-label="Kembali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5"/><path d="M11.5 5.5L5 12l6.5 6.5"/></svg></button>
+      <div class="htit"><h3>Alarm</h3><small id="almInfo"></small></div>
+    </div>
+    <div class="almbody">
+      <div class="setcard" id="setOpen">
+        <div class="ic">⚙️</div>
+        <div class="tx"><b>Pengaturan alarm</b><small id="setSum"></small></div>
+        <div class="ch">›</div>
+      </div>
+      <div id="almList"></div>
+    </div>
+    <button class="fab" id="almAdd" aria-label="Tambah alarm"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+  </div>
+</div>
+<div id="almEdit" hidden>
+  <div class="sheet">
+    <h3 id="aeTitle">Alarm baru</h3>
+    <div class="tdial">
+      <div class="tdisp">
+        <button id="tdH">12</button><span>:</span><button id="tdM">00</button>
+        <div class="ampm"><button id="aeAM">AM</button><button id="aePM">PM</button></div>
+      </div>
+      <svg id="dial" viewBox="0 0 240 240"><circle class="face" cx="120" cy="120" r="116"/><g id="dG"></g></svg>
+    </div>
+    <textarea class="inp" id="aeLabel" rows="1" placeholder="Judul alarm (opsional)"></textarea>
+    <small>Emoji alarm (muncul di tepi jam)</small>
+    <div class="emojis" id="aeEmoji"></div>
+    <input class="inp" id="aeEmojiIn" placeholder="atau ketik emoji sendiri">
+    <small>Ulangi (tanpa pilihan = sekali saja)</small>
+    <div class="days" id="aeDays"></div>
+    <small>Nada alarm</small>
+    <div class="tonerow"><select class="inp" id="aeTone"></select><button class="btn" id="aePrev" aria-label="Coba nada"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><span class="eq"><i></i><i></i><i></i></span></button></div>
+    <div class="acts">
+      <button class="btn del" id="aeDel">Hapus</button>
+      <button class="btn" id="aeCancel">Batal</button>
+      <button class="btn pri" id="aeSave">Simpan</button>
+    </div>
+  </div>
+</div>
+<div id="ring" hidden>
+  <div id="stars"></div>
+  <div class="rtop">
+    <div class="rgreet" id="rGreet">Selamat Pagi</div>
+    <div class="rtime" id="rTime"></div>
+    <div class="rlabel" id="rLabel"></div>
+  </div>
+  <div class="moonwrap" id="moon">
+    <div class="halo"></div>
+    <div class="moonin">
+      <svg viewBox="0 0 200 200" aria-label="Bulan">
+        <circle cx="100" cy="100" r="92" fill="#fff"/>
+        <ellipse cx="62" cy="52" rx="14" ry="8" transform="rotate(-20 62 52)" fill="#dcdcec"/>
+        <ellipse cx="30" cy="112" rx="11" ry="19" transform="rotate(-12 30 112)" fill="#dcdcec"/>
+        <ellipse cx="172" cy="96" rx="14" ry="26" transform="rotate(10 172 96)" fill="#dcdcec"/>
+        <ellipse cx="134" cy="168" rx="17" ry="10" transform="rotate(-25 134 168)" fill="#dcdcec"/>
+        <ellipse cx="76" cy="130" rx="4" ry="3" fill="#dcdcec"/>
+        <g class="f-wow">
+          <path d="M80 101q5-6 11-3M112 98q6-3 10 3" fill="none" stroke="#9a9ab5" stroke-width="2" stroke-linecap="round"/>
+          <ellipse cx="90" cy="114" rx="5" ry="7" fill="#16163a"/>
+          <ellipse cx="114" cy="114" rx="5" ry="7" fill="#16163a"/>
+          <ellipse cx="104" cy="136" rx="7" ry="10" fill="#16163a"/>
+        </g>
+        <g class="f-up">
+          <path d="M82 116q8-11 16 0M106 116q8-11 16 0" fill="none" stroke="#16163a" stroke-width="4" stroke-linecap="round"/>
+          <path d="M88 126q16 22 32 0z" fill="#16163a"/>
+        </g>
+        <g class="f-down">
+          <path d="M82 116h16M106 116h16" stroke="#16163a" stroke-width="4" stroke-linecap="round"/>
+          <path d="M96 134q8 6 16 0" fill="none" stroke="#16163a" stroke-width="4" stroke-linecap="round"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div class="rbot">
+    <div class="rhint">Geser bulan ke <b>atas</b> untuk bangun!<br>Geser bulan ke <b>bawah</b> untuk tunda...</div>
+    <div class="rbtns"><button id="rStop">Matikan</button><button id="rSnooze">Tunda 5 menit</button></div>
+  </div>
+</div>
+
+<!-- PENGATURAN ALARM -->
+<div id="almSet" hidden>
+  <div class="sheet">
+    <h3>Pengaturan alarm</h3>
+    <small>Durasi dering</small>
+    <select class="inp" id="sDur"></select>
+    <small>Volume alarm</small>
+    <div class="volrow"><input type="range" id="sVol" min="0" max="100" step="1"><b id="sVolV">70%</b></div>
+    <small>Notifikasi sebelum berdering</small>
+    <select class="inp" id="sPre"></select>
+    <div class="acts"><button class="btn pri" id="sClose">Selesai</button></div>
+  </div>
+</div>
+<!-- PENAMPIL GAMBAR BESAR (kartu peta): ketuk gambar / tombol ✕ = tutup, geser ke samping = gambar lain -->
+<div id="pv" hidden><div class="pv-track" id="pvTrack"></div><button type="button" class="pv-x" id="pvX" aria-label="Kembali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5"/><path d="M11.5 5.5L5 12l6.5 6.5"/></svg></button><div class="pv-cnt" id="pvCnt"></div></div>
+<!-- KATEGORI KEUANGAN: pil Pengeluaran | Pemasukan, kategori bulat. Tahan kategori = edit / hapus, tombol + = tambah -->
+<div id="kat" hidden>
+  <div class="calbox">
+    <div class="calhead">
+      <button class="ibtn back" id="katClose" aria-label="Kembali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5"/><path d="M11.5 5.5L5 12l6.5 6.5"/></svg></button>
+      <h3>Kategori</h3>
+    </div>
+    <div class="katbody">
+      <div class="epill" id="kPill" role="tablist" data-sel="0">
+        <i class="ethumb"></i>
+        <button type="button" role="tab" class="on" data-k="keluar" aria-selected="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>Pengeluaran</button>
+        <button type="button" role="tab" data-k="masuk" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7L7 17M15 17H7V9"/></svg>Pemasukan</button>
+      </div>
+      <div class="epanel on" id="kPKeluar"><div class="kat-grid" id="kGKeluar"></div></div>
+      <div class="epanel" id="kPMasuk"><div class="kat-grid" id="kGMasuk"></div></div>
+      <small class="kat-hint">Ketuk kategori untuk mencatat · tahan untuk edit atau hapus</small>
+    </div>
+  </div>
+  <div id="katToast" role="status" aria-live="polite"></div>
+</div>
+<!-- CATAT TRANSAKSI: terbuka saat kategori diketuk. Jumlah, tanggal, catatan = wajib semua -->
+<div id="trx" class="keluar" hidden>
+  <div class="calbox">
+    <div class="calhead">
+      <button class="ibtn back" id="trxClose" aria-label="Kembali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5"/><path d="M11.5 5.5L5 12l6.5 6.5"/></svg></button>
+      <h3 id="trxTitle">Pengeluaran</h3>
+    </div>
+    <div class="katbody" id="trxBody">
+      <div class="trx-cat"><i id="trxEmo">🍜</i><b id="trxCat">Makan</b></div>
+      <div class="trx-f" id="fJml">
+        <label for="trxJml">Jumlah <em>*</em></label>
+        <div class="trx-amt"><span>Rp</span><input id="trxJml" inputmode="numeric" autocomplete="off" placeholder="0"></div>
+        <small>Jumlah wajib diisi</small>
+      </div>
+      <div class="trx-f" id="fTgl">
+        <label for="trxTgl">Tanggal <em>*</em></label>
+        <input class="inp" type="date" id="trxTgl">
+        <small>Tanggal wajib diisi</small>
+      </div>
+      <div class="trx-f" id="fCat">
+        <label for="trxCt">Catatan <em>*</em></label>
+        <textarea class="inp" id="trxCt" rows="3" placeholder="Tulis catatan…"></textarea>
+        <small>Catatan wajib diisi</small>
+      </div>
+    </div>
+    <div class="trx-foot"><button type="button" class="trx-del" id="trxDel" hidden>Hapus</button><button type="button" class="trx-save" id="trxSave">Simpan</button></div>
+  </div>
+</div>
+<div id="katEdit" hidden>
+  <div class="sheet">
+    <h3 id="keTitle">Tambah kategori</h3>
+    <div class="ke-prev"><i id="kePrev">✨</i></div>
+    <small>Nama kategori</small>
+    <input class="inp" id="keNama" placeholder="Contoh: Makan" autocomplete="off">
+    <small>Ikon</small>
+    <div class="emojis" id="keEmoji"></div>
+    <input class="inp" id="keEmojiIn" placeholder="atau ketik emoji sendiri" autocomplete="off">
+    <div class="acts">
+      <button class="btn del" id="keDel">Hapus</button>
+      <button class="btn" id="keCancel">Batal</button>
+      <button class="btn pri" id="keSave">Simpan</button>
+    </div>
+  </div>
+</div>
+<!-- PAKAI TIKET (Produktif): kategori bulat. Tahan kategori = edit / hapus, tombol + = tambah -->
+<div id="ptKat" hidden>
+  <div class="calbox">
+    <div class="calhead">
+      <button class="ibtn back" id="ptKatClose" aria-label="Kembali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5"/><path d="M11.5 5.5L5 12l6.5 6.5"/></svg></button>
+      <h3>Pakai tiket</h3>
+    </div>
+    <div class="katbody">
+      <div class="epanel on" id="ptPPakai"><div class="kat-grid" id="ptGPakai"></div></div>
+      <small class="kat-hint">Ketuk kategori untuk memakai tiket · tahan untuk edit atau hapus</small>
+    </div>
+  </div>
+  <div id="ptToast" role="status" aria-live="polite"></div>
+</div>
+<!-- ISI DATA TIKET: terbuka saat kategori diketuk. 5 syarat wajib, mengurangi 1 tiket -->
+<div id="ptForm" class="pakai" hidden>
+  <div class="calbox">
+    <div class="calhead">
+      <button class="ibtn back" id="ptFormClose" aria-label="Kembali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5"/><path d="M11.5 5.5L5 12l6.5 6.5"/></svg></button>
+      <h3 id="ptFormTitle">Pakai tiket</h3>
+    </div>
+    <div class="katbody" id="ptFormBody">
+      <div class="trx-cat"><i id="ptFEmo">📚</i><b id="ptFCat">Belajar</b></div>
+      <div id="ptFPakai">
+        <h4 class="pt-q">Apa pekerjaan yang diselesaikan?</h4>
+        <small class="pt-note">Syarat penggunaan tiket · wajib diisi semua</small>
+        <div class="trx-f" id="pfTgl"><label for="pTgl">Tanggal <em>*</em></label><input class="inp" type="date" id="pTgl"><small>Tanggal wajib diisi</small></div>
+        <div class="trx-f" id="pfNama"><label for="pNama">Nama pekerjaan <em>*</em></label><input class="inp" id="pNama" autocomplete="off" placeholder="Contoh: Menyusun laporan bulanan"><small>Nama pekerjaan wajib diisi</small></div>
+        <div class="trx-f" id="pfStd"><label for="pStd">Standar selesai <em>*</em></label><textarea class="inp" id="pStd" rows="3" placeholder="Pekerjaan dianggap selesai bila…"></textarea><small>Standar selesai wajib diisi</small></div>
+        <div class="trx-f" id="pfBukti"><label for="pBukti">Bukti <em>*</em></label><textarea class="inp" id="pBukti" rows="3" placeholder="Bukti pekerjaan selesai (hasil, link, foto, dll.)"></textarea><small>Bukti wajib diisi</small></div>
+        <div class="trx-f" id="pfTuj"><label for="pTuj">Tujuan <em>*</em></label><textarea class="inp" id="pTuj" rows="3" placeholder="Untuk apa pekerjaan ini dikerjakan?"></textarea><small>Tujuan wajib diisi</small></div>
+      </div>
+    </div>
+    <div class="trx-foot"><button type="button" class="trx-del" id="ptFDel" hidden>Hapus</button><button type="button" class="trx-save" id="ptFSave">Pakai 1 tiket</button></div>
+  </div>
+</div>
+<div id="ptEdit" hidden>
+  <div class="sheet">
+    <h3 id="ptKeTitle">Tambah kategori</h3>
+    <div class="ke-prev"><i id="ptKePrev">✨</i></div>
+    <small>Nama kategori</small>
+    <input class="inp" id="ptKeNama" placeholder="Contoh: Belajar" autocomplete="off">
+    <small>Ikon</small>
+    <div class="emojis" id="ptKeEmoji"></div>
+    <input class="inp" id="ptKeEmojiIn" placeholder="atau ketik emoji sendiri" autocomplete="off">
+    <div class="acts">
+      <button class="btn del" id="ptKeDel">Hapus</button>
+      <button class="btn" id="ptKeCancel">Batal</button>
+      <button class="btn pri" id="ptKeSave">Simpan</button>
+    </div>
+  </div>
+</div>
+<!-- HALAMAN ANGGARAN: ikon, judul, deskripsi (ketuk 3x = edit, ketuk di luar = kunci), kartu sisa anggaran, tombol tambah / pakai -->
+<div id="ang" hidden>
+  <div class="calbox">
+    <div class="calhead">
+      <button class="ibtn back" id="angClose" aria-label="Kembali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5"/><path d="M11.5 5.5L5 12l6.5 6.5"/></svg></button>
+      <h3>Anggaran</h3>
+    </div>
+    <div class="katbody" id="angBody">
+      <div class="ang-hero" id="angHero">
+        <i class="ang-ic" id="angIc">💰</i>
+        <h2 class="ang-nm" id="angNm"></h2>
+        <div class="ang-dw" id="angDw"><textarea class="ang-desc" id="angDesc" rows="1" readonly tabindex="-1" placeholder="Deskripsi anggaran · ketuk 3x untuk menulis" aria-label="Deskripsi anggaran"></textarea></div>
+        <small class="ang-dh">Ketuk di luar untuk mengunci</small>
+      </div>
+      <div class="saldo ang-card" id="angCard">
+        <div class="sd-top"><span class="sd-lbl">Sisa anggaran</span></div>
+        <div class="sd-amt"><span class="sd-rp">Rp</span><b id="angVal">0</b></div>
+        <div class="sd-row">
+          <div class="sd-pill in"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></i><div><small>Ditambahkan</small><b id="angIn">Rp 0</b></div></div>
+          <div class="sd-pill out"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></i><div><small>Terpakai</small><b id="angOut">Rp 0</b></div></div>
+        </div>
+      </div>
+      <div class="ang-btns">
+        <button type="button" class="ang-b add" id="angAdd">＋ Tambah anggaran</button>
+        <button type="button" class="ang-b use" id="angUse">Pakai anggaran</button>
+      </div>
+      <small class="kat-hint">Tambah anggaran diambil dari saldo utama · pemakaian tercatat di riwayat transaksi</small>
+    </div>
+  </div>
+</div>
+<div id="angAmt" hidden>
+  <div class="sheet">
+    <h3>Tambah anggaran</h3>
+    <small id="angAmtInfo">Saldo utama: Rp 0</small>
+    <input class="inp" id="angJml" inputmode="numeric" autocomplete="off" placeholder="Jumlah (Rp)" aria-label="Jumlah anggaran">
+    <input class="inp" id="angCt" autocomplete="off" placeholder="Catatan (opsional)" aria-label="Catatan">
+    <div class="acts">
+      <button class="btn" id="angAmtCancel">Batal</button>
+      <button class="btn pri" id="angAmtSave">Tambahkan</button>
+    </div>
+  </div>
+</div>
+<!-- HALAMAN TUGAS: ikon, judul, deskripsi (ketuk 3x = edit, ketuk di luar = kunci), kartu sisa tiket tugas, tombol tambah / pakai tiket -->
+<div id="tg" hidden>
+  <div class="calbox">
+    <div class="calhead">
+      <button class="ibtn back" id="tgClose" aria-label="Kembali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5"/><path d="M11.5 5.5L5 12l6.5 6.5"/></svg></button>
+      <h3>Tugas</h3>
+    </div>
+    <div class="katbody" id="tgBody">
+      <div class="ang-hero" id="tgHero">
+        <i class="ang-ic" id="tgIc">🎯</i>
+        <h2 class="ang-nm" id="tgNm"></h2>
+        <div class="ang-dw" id="tgDw"><textarea class="ang-desc" id="tgDesc" rows="1" readonly tabindex="-1" placeholder="Deskripsi tugas · ketuk 3x untuk menulis" aria-label="Deskripsi tugas"></textarea></div>
+        <small class="ang-dh">Ketuk di luar untuk mengunci</small>
+      </div>
+      <div class="saldo tiket-card tg-card" id="tgCard">
+        <div class="tk-title"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/><path d="M13 5v2M13 11v2M13 17v2"/></svg><span>Sisa Tiket Tugas</span></div>
+        <div class="sd-amt"><b id="tgVal">0</b><span class="sd-rp">tiket</span></div>
+        <div class="sd-row">
+          <div class="sd-pill in"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></i><div><small>Ditambahkan</small><b id="tgIn">0 tiket</b></div></div>
+          <div class="sd-pill out"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></i><div><small>Terpakai</small><b id="tgOut">0 tiket</b></div></div>
+        </div>
+      </div>
+      <div class="ang-btns">
+        <button type="button" class="ang-b add" id="tgAdd">＋ Tambah tiket</button>
+        <button type="button" class="ang-b use" id="tgUse">Pakai tiket</button>
+      </div>
+      <small class="kat-hint">Tambah tiket diambil dari kartu tiket · pemakaian tercatat di riwayat pemakaian</small>
+    </div>
+  </div>
+</div>
+<div id="tgAmt" hidden>
+  <div class="sheet">
+    <h3>Tambah tiket</h3>
+    <small id="tgAmtInfo">Kartu tiket: 0 tiket</small>
+    <input class="inp" id="tgJml" inputmode="numeric" autocomplete="off" placeholder="Jumlah tiket" aria-label="Jumlah tiket">
+    <div class="acts">
+      <button class="btn" id="tgAmtCancel">Batal</button>
+      <button class="btn pri" id="tgAmtSave">Tambahkan</button>
+    </div>
+  </div>
+</div>
+<!-- FORM HUTANG: nama, Rp, tanggal, catatan (tanpa batas karakter) -->
+<div id="htForm" hidden>
+  <div class="sheet">
+    <h3 id="htFT">Tambah hutang</h3>
+    <small id="htFNL">Nama</small>
+    <input class="inp" id="htFN" autocomplete="off" placeholder="Nama" aria-label="Nama">
+    <small>Jumlah</small>
+    <div class="ht-amt"><span>Rp</span><input class="inp" id="htFA" inputmode="numeric" autocomplete="off" placeholder="0" aria-label="Jumlah Rp"></div>
+    <small>Tanggal</small>
+    <input class="inp" type="date" id="htFD" aria-label="Tanggal">
+    <small>Catatan</small>
+    <textarea class="inp" id="htFC" rows="3" placeholder="Tulis catatan…" aria-label="Catatan"></textarea>
+    <small class="pl-msg" id="htFM"></small>
+    <div class="acts"><button type="button" class="btn del" id="htFDel" hidden>Hapus</button><button type="button" class="btn" id="htFCancel">Batal</button><button type="button" class="btn pri" id="htFSave">Simpan</button></div>
+  </div>
+</div>
+<!-- HALAMAN RIWAYAT TRANSAKSI LENGKAP: panah kembali (kiri), filter kategori (kanan), pencarian di kepala halaman -->
+<div id="rwPage" hidden>
+  <div class="calbox">
+    <div class="calhead">
+      <button class="ibtn back" id="rwpBack" aria-label="Kembali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5"/><path d="M11.5 5.5L5 12l6.5 6.5"/></svg></button>
+      <h3>Riwayat transaksi</h3>
+      <button class="ibtn rwp-f" id="rwpFilter" aria-label="Filter kategori"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18l-7 8.5V19l-4 2v-7.5z"/></svg><i id="rwpDot" hidden></i></button>
+    </div>
+    <div class="rwp-top">
+      <div class="rw-search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input class="inp" id="rwpQ" type="search" enterkeyhint="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Cari catatan, kategori, tgl, jam…" aria-label="Cari transaksi">
+        <button type="button" class="rw-clr" id="rwpClr" aria-label="Hapus pencarian" hidden>✕</button>
+      </div>
+      <div class="rwp-chip" id="rwpChip" hidden><span id="rwpChipT"></span><button type="button" id="rwpChipX" aria-label="Hapus filter kategori">✕</button></div>
+    </div>
+    <div class="katbody" id="rwpBody">
+      <div class="rw-head" id="rwpHead"></div>
+      <div id="rwpList"></div>
+    </div>
+  </div>
+</div>
+<!-- HALAMAN RIWAYAT PEMAKAIAN TIKET LENGKAP: panah kembali (kiri), filter kategori (kanan), pencarian di kepala halaman -->
+<div id="ptRwPage" hidden>
+  <div class="calbox">
+    <div class="calhead">
+      <button class="ibtn back" id="tkRwpBack" aria-label="Kembali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5"/><path d="M11.5 5.5L5 12l6.5 6.5"/></svg></button>
+      <h3>Riwayat pemakaian</h3>
+      <button class="ibtn rwp-f" id="tkRwpFilter" aria-label="Filter kategori"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18l-7 8.5V19l-4 2v-7.5z"/></svg><i id="tkRwpDot" hidden></i></button>
+    </div>
+    <div class="rwp-top">
+      <div class="rw-search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input class="inp" id="tkRwpQ" type="search" enterkeyhint="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Cari pekerjaan, kategori, tgl, jam…" aria-label="Cari pemakaian tiket">
+        <button type="button" class="rw-clr" id="tkRwpClr" aria-label="Hapus pencarian" hidden>✕</button>
+      </div>
+      <div class="rwp-chip" id="tkRwpChip" hidden><span id="tkRwpChipT"></span><button type="button" id="tkRwpChipX" aria-label="Hapus filter kategori">✕</button></div>
+    </div>
+    <div class="katbody" id="tkRwpBody">
+      <div class="rw-head" id="tkRwpHead"></div>
+      <div id="tkRwpList"></div>
+    </div>
+  </div>
+</div>
+<div id="ptRwFilter" hidden>
+  <div class="rwf-sheet">
+    <h3>Filter kategori</h3>
+    <div class="rwf-list" id="tkRwfList"></div>
+  </div>
+</div>
+<div id="rwFilter" hidden>
+  <div class="rwf-sheet">
+    <h3>Filter kategori</h3>
+    <div class="rwf-list" id="rwfList"></div>
+  </div>
+</div>
+<!-- PILIH PERIODE GRAFIK: ganti tahun cepat (panah / deret tahun) + pilih bulan -->
+<div id="gfPick" hidden>
+  <div class="gfp-sheet">
+    <h3 id="gfpTitle">Pilih periode</h3>
+    <div class="gfp-yr">
+      <button type="button" id="gfpPrev" aria-label="Tahun sebelumnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <b id="gfpYear"></b>
+      <button type="button" id="gfpNext" aria-label="Tahun berikutnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+    <div class="gfp-years" id="gfpYears"></div>
+    <div class="gfp-grid" id="gfpGrid"></div>
+  </div>
+</div>
+<!-- PEMILIH TAHUN & BULAN (Produktif > Grafik): hanya tahun/bulan yang berisi pemakaian tiket yang bisa dipilih -->
+<div id="pgPick" hidden>
+  <div class="gfp-sheet">
+    <h3 id="pgpTitle">Pilih periode</h3>
+    <div class="gfp-yr">
+      <button type="button" id="pgpPrev" aria-label="Tahun sebelumnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <b id="pgpYear"></b>
+      <button type="button" id="pgpNext" aria-label="Tahun berikutnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+    <div class="gfp-years" id="pgpYears"></div>
+    <div class="gfp-grid" id="pgpGrid"></div>
+  </div>
+</div>
+<!-- PEMUTAR VIDEO LAYAR PENUH (kartu video): panah kiri atas = tutup, geser ke samping = video lain -->
+<div id="vv" hidden><div class="pv-track" id="vvTrack"></div><button type="button" class="pv-x" id="vvX" aria-label="Kembali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5"/><path d="M11.5 5.5L5 12l6.5 6.5"/></svg></button><div class="pv-cnt" id="vvCnt"></div>
+  <div class="vv-ctl" id="vvCtl">
+    <div class="vv-bar"><span id="vvCur">0:00</span><input type="range" id="vvSeek" min="0" max="1000" step="1" value="0" aria-label="Posisi video"><span id="vvDur">0:00</span></div>
+    <div class="vv-btns">
+      <button type="button" id="vvBack" aria-label="Mundur 10 detik"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 5V1L7 6l5 5V7c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6H4c0 4.4 3.6 8 8 8s8-3.6 8-8-3.6-8-8-8z"/><text x="12" y="16.4" text-anchor="middle" font-size="6.5" font-weight="700" font-family="Poppins,system-ui,sans-serif">10</text></svg></button>
+      <button type="button" id="vvPlay" class="big" aria-label="Putar atau jeda"><span class="ic-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span><span class="ic-pause"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg></span></button>
+      <button type="button" id="vvFwd" aria-label="Maju 10 detik"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 5V1l5 5-5 5V7c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6h2c0 4.4-3.6 8-8 8s-8-3.6-8-8 3.6-8 8-8z"/><text x="12" y="16.4" text-anchor="middle" font-size="6.5" font-weight="700" font-family="Poppins,system-ui,sans-serif">10</text></svg></button>
+    </div>
+  </div></div>
+<!-- HALAMAN DALAM GALERY: banner 16:9 (cover asli di setengah atas, gradasi hingga hitam di setengah bawah). Judul mengikuti judul kotak, deskripsi: ketuk 3x = edit, ketuk 1x di luar = kunci -->
+<div id="gal" hidden>
+  <div class="calbox">
+    <div class="gl-scroll" id="galBody">
+      <div class="gl-ban kosong" id="galBan">
+        <img class="gl-bimg" id="galImg" alt="" draggable="false" referrerpolicy="no-referrer">
+        <div class="gl-ph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="1.6"/><path d="M4 18l5.5-5.5 4 4 2.5-2.5L20 18"/></svg></div>
+        <button class="ibtn back gl-back" id="galClose" aria-label="Kembali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5"/><path d="M11.5 5.5L5 12l6.5 6.5"/></svg></button>
+        <div class="gl-btx">
+          <h2 class="gl-nm" id="galNm"></h2>
+          <div class="gl-dw" id="galDw"><textarea class="gl-desc" id="galDesc" rows="1" readonly tabindex="-1" placeholder="Deskripsi · ketuk 3x untuk menulis" aria-label="Deskripsi"></textarea></div>
+        </div>
+      </div>
+      <small class="gl-dh">Ketuk di luar deskripsi untuk mengunci</small>
+      <!-- PLAYLIST LAGU: hanya tampil di halaman dalam Galery kotak 1. Tombol + = tambah lagu, titik tiga = hapus, kanan atas = urutkan -->
+      <section class="pl" id="plWrap" hidden aria-label="Playlist lagu">
+        <div class="pl-head">
+          <div class="pl-ht"><h3>Playlist lagu</h3><small id="plCnt">0 lagu</small></div>
+          <div class="pl-sort" role="group" aria-label="Urutkan playlist"><button type="button" class="pl-sc" id="plSortC" aria-haspopup="true" aria-label="Urutkan berdasarkan"><span class="pl-si" id="plSortI"></span><span id="plSortT">Terbaru</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><button type="button" class="pl-sd" id="plSortD"></button></div>
+        </div>
+        <button type="button" class="pl-add" id="plAdd" aria-label="Tambah lagu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="pl-list" id="plList"></div>
+      </section>
+      <!-- PLAYLIST FILM: hanya tampil di halaman dalam Galery kotak 2. Tombol + = tambah film, titik tiga = edit / hapus, kanan atas = urutkan, ketuk film = halaman detail -->
+      <section class="pl" id="fmWrap" hidden aria-label="Playlist film">
+        <div class="pl-head">
+          <div class="pl-ht"><h3>Playlist film</h3><small id="fmCnt">0 film</small></div>
+          <div class="pl-sort" role="group" aria-label="Urutkan playlist film"><button type="button" class="pl-sc" id="fmSortC" aria-haspopup="true" aria-label="Urutkan berdasarkan"><span class="pl-si" id="fmSortI"></span><span id="fmSortT">Terbaru</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><button type="button" class="pl-sd" id="fmSortD"></button></div>
+        </div>
+        <button type="button" class="pl-add" id="fmAdd" aria-label="Tambah film"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="fm-grid" id="fmGrid"></div>
+      </section>
+      <!-- TEMPAT FAVORIT (Galery kotak 4): tombol + = tambah tempat, titik tiga = edit / hapus, kanan atas = urutkan, ketuk tempat = halaman detail. Data: 'tempat' -->
+      <section class="pl" id="tpWrap" hidden aria-label="Tempat favorit">
+        <div class="pl-head">
+          <div class="pl-ht"><h3>Tempat favorit</h3><small id="tpCnt">0 tempat</small></div>
+          <div class="pl-sort" role="group" aria-label="Urutkan tempat favorit"><button type="button" class="pl-sc" id="tpSortC" aria-haspopup="true" aria-label="Urutkan berdasarkan"><span class="pl-si" id="tpSortI"></span><span id="tpSortT">Terbaru</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><button type="button" class="pl-sd" id="tpSortD"></button></div>
+        </div>
+        <button type="button" class="pl-add" id="tpAdd" aria-label="Tambah tempat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="fm-grid" id="tpGrid"></div>
+      </section>
+      <!-- CHANNEL FAVORIT (Galery kotak 5): tombol + = tambah channel, titik tiga = edit / hapus, kanan atas = urutkan, ketuk channel = halaman detail. Data: 'channel' -->
+      <section class="pl" id="cnWrap" hidden aria-label="Channel favorit">
+        <div class="pl-head">
+          <div class="pl-ht"><h3>Channel favorit</h3><small id="cnCnt">0 channel</small></div>
+          <div class="pl-sort" role="group" aria-label="Urutkan channel favorit"><button type="button" class="pl-sc" id="cnSortC" aria-haspopup="true" aria-label="Urutkan berdasarkan"><span class="pl-si" id="cnSortI"></span><span id="cnSortT">Terbaru</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><button type="button" class="pl-sd" id="cnSortD"></button></div>
+        </div>
+        <button type="button" class="pl-add" id="cnAdd" aria-label="Tambah channel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="cn-list" id="cnList"></div>
+      </section>
+      <!-- CHANNEL FAVORIT (Galery kotak 6): tombol + = tambah tokoh, titik tiga = edit / hapus, kanan atas = urutkan, ketuk tokoh = halaman detail. Data: 'tokoh' -->
+      <section class="pl" id="tkWrap" hidden aria-label="Tokoh favorit">
+        <div class="pl-head">
+          <div class="pl-ht"><h3>Tokoh favorit</h3><small id="tkCnt">0 tokoh</small></div>
+          <div class="pl-sort" role="group" aria-label="Urutkan tokoh favorit"><button type="button" class="pl-sc" id="tkSortC" aria-haspopup="true" aria-label="Urutkan berdasarkan"><span class="pl-si" id="tkSortI"></span><span id="tkSortT">Terbaru</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><button type="button" class="pl-sd" id="tkSortD"></button></div>
+        </div>
+        <button type="button" class="pl-add" id="tkAdd" aria-label="Tambah tokoh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="fm-grid" id="tkList"></div>
+      </section>
+      <!-- KOLEKSI LINK (Galery kotak 7): tombol + = tambah link, ketuk link = buka, titik tiga = buka / salin / edit / hapus, kanan atas = urutkan, chip = filter kategori. Data: 'link' -->
+      <section class="pl" id="lkWrap" hidden aria-label="Koleksi link">
+        <div class="pl-head">
+          <div class="pl-ht"><h3>Koleksi link</h3><small id="lkCnt">0 link</small></div>
+          <div class="pl-sort" role="group" aria-label="Urutkan koleksi link"><button type="button" class="pl-sc" id="lkSortC" aria-haspopup="true" aria-label="Urutkan berdasarkan"><span class="pl-si" id="lkSortI"></span><span id="lkSortT">Terbaru</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><button type="button" class="pl-sd" id="lkSortD"></button></div>
+        </div>
+        <button type="button" class="pl-add" id="lkAdd" aria-label="Tambah link"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="lk-fl" id="lkFilter" hidden></div>
+        <div class="lk-list" id="lkList"></div>
+      </section>
+      <!-- KUTIPAN (Galery kotak 8): kartu flashcard bertumpuk, geser kiri / kanan = ganti kutipan, kanan atas = urutkan. Data: 'kutipan' -->
+      <section class="pl" id="kqWrap" hidden aria-label="Kutipan">
+        <div class="pl-head">
+          <div class="pl-ht"><h3>Kutipan</h3><small id="kqCnt">0 kutipan</small></div>
+          <div class="pl-sort" role="group" aria-label="Urutkan kutipan"><button type="button" class="pl-sc" id="kqSortC" aria-haspopup="true" aria-label="Urutkan berdasarkan"><span class="pl-si" id="kqSortI"></span><span id="kqSortT">Terbaru</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><button type="button" class="pl-sd" id="kqSortD"></button></div>
+        </div>
+        <button type="button" class="pl-add" id="kqAdd" aria-label="Tambah kutipan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="kq-deck kosong" id="kqDeck" aria-label="Tumpukan kartu kutipan"></div>
+        <div class="kq-nav"><button type="button" id="kqPrev" aria-label="Kutipan sebelumnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><span id="kqPos">0 / 0</span><button type="button" id="kqNext" aria-label="Kutipan berikutnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></div>
+        <div class="kq-act">
+          <button type="button" id="kqCopy"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 9h10a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V10a1 1 0 0 1 1-1zM5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg>Salin</button>
+          <button type="button" id="kqEdit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>Edit</button>
+          <button type="button" id="kqFont" aria-haspopup="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 19L8 5l6 14M4.5 14h7M15 19l3.5-8 3.5 8M16.5 17h4"/></svg>Font</button>
+          <button type="button" id="kqDel" class="del"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1l1-12M9 7V4h6v3"/></svg>Hapus</button>
+        </div>
+      </section>
+      <!-- READLIST BUKU (Galery kotak 3): tombol + = tambah buku, titik tiga = edit / hapus, kanan atas = urutkan, ketuk buku = halaman detail. Data: 'buku' -->
+      <section class="pl" id="bkWrap" hidden aria-label="Readlist buku">
+        <div class="pl-head">
+          <div class="pl-ht"><h3>Readlist buku</h3><small id="bkCnt">0 buku</small></div>
+          <div class="pl-sort" role="group" aria-label="Urutkan readlist buku"><button type="button" class="pl-sc" id="bkSortC" aria-haspopup="true" aria-label="Urutkan berdasarkan"><span class="pl-si" id="bkSortI"></span><span id="bkSortT">Terbaru</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><button type="button" class="pl-sd" id="bkSortD"></button></div>
+        </div>
+        <button type="button" class="pl-add" id="bkAdd" aria-label="Tambah buku"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="fm-grid" id="bkGrid"></div>
+      </section>
+    </div>
+  </div>
+</div>
+<!-- FORM TAMBAH LAGU & URUTKAN PLAYLIST -->
+<div id="plForm" hidden>
+  <div class="sheet">
+    <h3 id="plFormT">Tambah lagu</h3>
+    <div class="pl-fcv">
+      <button type="button" class="pl-cvbtn" id="plCvBtn" aria-label="Pilih cover dari galeri"><img id="plCvImg" alt="" hidden referrerpolicy="no-referrer"><span id="plCvPh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></svg></span><i>Galeri</i></button>
+      <div class="pl-fcvr"><small>Cover lagu</small><input class="inp" id="plCvUrl" type="url" inputmode="url" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="atau tempel link cover"><button type="button" class="pl-cvx" id="plCvClr" hidden>Hapus cover</button></div>
+    </div>
+    <small>Judul lagu *</small>
+    <input class="inp" id="plT" autocomplete="off" placeholder="Judul lagu">
+    <small>Artis</small>
+    <input class="inp" id="plA" autocomplete="off" placeholder="Nama artis">
+    <small>Link lagu (opsional)</small>
+    <input class="inp" id="plU" type="url" inputmode="url" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="https://…">
+    <small class="pl-msg" id="plMsg"></small>
+    <div class="acts"><button class="btn" id="plCancel">Batal</button><button class="btn pri" id="plSave">Simpan</button></div>
+  </div>
+</div>
+<input type="file" id="plFile" accept="image/*" hidden>
+</div>
+<!-- FORM TAMBAH / EDIT FILM & HALAMAN DETAIL FILM -->
+<div id="fmForm" hidden>
+  <div class="sheet">
+    <h3 id="fmFormT">Tambah film</h3>
+    <div class="pl-fcv">
+      <button type="button" class="pl-cvbtn fm-cvbtn" id="fmCvBtn" aria-label="Pilih cover dari galeri"><img id="fmCvImg" alt="" hidden referrerpolicy="no-referrer"><span id="fmCvPh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zM7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></svg></span><i>Galeri</i></button>
+      <div class="pl-fcvr"><small>Cover film</small><input class="inp" id="fmCvUrl" type="url" inputmode="url" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="atau tempel link cover"><button type="button" class="pl-cvx" id="fmCvClr" hidden>Hapus cover</button></div>
+    </div>
+    <small>Judul film *</small>
+    <input class="inp" id="fmT" autocomplete="off" placeholder="Judul film">
+    <small>Tahun</small>
+    <input class="inp" id="fmY" autocomplete="off" placeholder="Contoh: 2019 atau 2019–2021">
+    <small class="pl-msg" id="fmMsg"></small>
+    <div class="acts"><button class="btn" id="fmCancel">Batal</button><button class="btn pri" id="fmSave">Simpan</button></div>
+  </div>
+</div>
+<input type="file" id="fmFile" accept="image/*" hidden>
+<!-- FORM TAMBAH / EDIT BUKU & HALAMAN DETAIL BUKU -->
+<div id="bkForm" hidden>
+  <div class="sheet">
+    <h3 id="bkFormT">Tambah buku</h3>
+    <div class="pl-fcv">
+      <button type="button" class="pl-cvbtn fm-cvbtn" id="bkCvBtn" aria-label="Pilih cover dari galeri"><img id="bkCvImg" alt="" hidden referrerpolicy="no-referrer"><span id="bkCvPh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><i>Galeri</i></button>
+      <div class="pl-fcvr"><small>Cover buku</small><input class="inp" id="bkCvUrl" type="url" inputmode="url" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="atau tempel link cover"><button type="button" class="pl-cvx" id="bkCvClr" hidden>Hapus cover</button></div>
+    </div>
+    <small>Judul buku *</small>
+    <input class="inp" id="bkT" autocomplete="off" placeholder="Judul buku">
+    <small>Penulis</small>
+    <input class="inp" id="bkP" autocomplete="off" placeholder="Nama penulis">
+    <small>Status baca</small>
+    <div class="bk-seg" id="bkSeg" role="group" aria-label="Status baca"><button type="button" data-s="0">Belum dibaca</button><button type="button" data-s="1">Sedang dibaca</button><button type="button" data-s="2">Sudah selesai</button></div>
+    <small class="pl-msg" id="bkMsg"></small>
+    <div class="acts"><button class="btn" id="bkCancel">Batal</button><button class="btn pri" id="bkSave">Simpan</button></div>
+  </div>
+</div>
+<input type="file" id="bkFile" accept="image/*" hidden>
+<div id="bkPage" hidden>
+  <div class="calbox">
+    <div class="fm-scroll" id="bkBody">
+      <div class="fm-hero kosong" id="bkHero">
+        <div class="fm-hbg" id="bkHbg"></div>
+        <img id="bkHimg" alt="" draggable="false" referrerpolicy="no-referrer">
+        <div class="gl-ph" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+        <button type="button" class="ibtn back gl-back" id="bkBack" aria-label="Kembali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5"/><path d="M11.5 5.5L5 12l6.5 6.5"/></svg></button>
+      </div>
+      <div class="fm-info">
+        <h2 class="fm-nm" id="bkNm"></h2>
+        <div class="bk-pills"><span class="fm-yr" id="bkPn" hidden></span><span class="fm-yr bk-sp" id="bkSt"></span></div>
+        <div class="fm-dw" id="bkDw"><textarea class="fm-desc" id="bkDesc" rows="1" readonly tabindex="-1" placeholder="Sinopsis atau catatan · ketuk 3x untuk menulis" aria-label="Sinopsis atau catatan buku"></textarea></div>
+        <small class="fm-dh">Ketuk di luar kotak untuk mengunci</small>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FORM TAMBAH / EDIT TEMPAT FAVORIT & HALAMAN DETAIL TEMPAT -->
+<div id="tpForm" hidden>
+  <div class="sheet">
+    <h3 id="tpFormT">Tambah tempat</h3>
+    <div class="pl-fcv">
+      <button type="button" class="pl-cvbtn fm-cvbtn tp-cvbtn" id="tpCvBtn" aria-label="Pilih cover dari galeri"><img id="tpCvImg" alt="" hidden referrerpolicy="no-referrer"><span id="tpCvPh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12zM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/></svg></span><i>Galeri</i></button>
+      <div class="pl-fcvr"><small>Cover tempat</small><input class="inp" id="tpCvUrl" type="url" inputmode="url" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="atau tempel link cover"><button type="button" class="pl-cvx" id="tpCvClr" hidden>Hapus cover</button></div>
+    </div>
+    <small>Nama tempat *</small>
+    <input class="inp" id="tpT" autocomplete="off" placeholder="Contoh: Warung Kopi Pak Eko">
+    <small>Wilayah (provinsi / negara)</small>
+    <input class="inp" id="tpW" autocomplete="off" list="tpDlW" placeholder="Contoh: Jawa Barat">
+    <small>Kota / kabupaten</small>
+    <input class="inp" id="tpK" autocomplete="off" list="tpDlK" placeholder="Contoh: Bandung">
+    <small>Daerah / kecamatan</small>
+    <input class="inp" id="tpA" autocomplete="off" list="tpDlA" placeholder="Contoh: Lembang">
+    <datalist id="tpDlW"></datalist><datalist id="tpDlK"></datalist><datalist id="tpDlA"></datalist>
+    <small class="pl-msg" id="tpMsg"></small>
+    <div class="acts"><button class="btn" id="tpCancel">Batal</button><button class="btn pri" id="tpSave">Simpan</button></div>
+  </div>
+</div>
+<input type="file" id="tpFile" accept="image/*" hidden>
+<div id="tpPage" hidden>
+  <div class="calbox">
+    <div class="fm-scroll" id="tpBody">
+      <div class="fm-hero tp-hero kosong" id="tpHero">
+        <div class="fm-hbg" id="tpHbg"></div>
+        <img id="tpHimg" alt="" draggable="false" referrerpolicy="no-referrer">
+        <div class="gl-ph" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12zM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/></svg></div>
+        <button type="button" class="ibtn back gl-back" id="tpBack" aria-label="Kembali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5"/><path d="M11.5 5.5L5 12l6.5 6.5"/></svg></button>
+      </div>
+      <div class="fm-info">
+        <h2 class="fm-nm" id="tpNm"></h2>
+        <div class="tp-chain" id="tpCh" hidden></div>
+        <div class="fm-dw" id="tpDw"><textarea class="fm-desc" id="tpDesc" rows="1" readonly tabindex="-1" placeholder="Cerita tentang tempat ini · ketuk 3x untuk menulis" aria-label="Deskripsi tempat"></textarea></div>
+        <small class="fm-dh">Ketuk di luar kotak untuk mengunci</small>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FORM TAMBAH / EDIT CHANNEL FAVORIT & HALAMAN DETAIL CHANNEL -->
+<div id="cnForm" hidden>
+  <div class="sheet">
+    <h3 id="cnFormT">Tambah channel</h3>
+    <div class="pl-fcv">
+      <button type="button" class="pl-cvbtn fm-cvbtn cn-cvbtn" id="cnCvBtn" aria-label="Pilih cover dari galeri"><img id="cnCvImg" alt="" hidden referrerpolicy="no-referrer"><span id="cnCvPh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1zM8 3l4 5 4-5"/></svg></span><i>Galeri</i></button>
+      <div class="pl-fcvr"><small>Cover channel</small><input class="inp" id="cnCvUrl" type="url" inputmode="url" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="atau tempel link cover"><button type="button" class="pl-cvx" id="cnCvClr" hidden>Hapus cover</button></div>
+    </div>
+    <small>Nama channel *</small>
+    <input class="inp" id="cnT" autocomplete="off" placeholder="Nama channel">
+    <div class="cn-ph"><small>Platform</small><button type="button" class="cn-pmg" id="cnPMg">Kelola</button></div>
+    <div class="cn-pchips" id="cnPChips" role="group" aria-label="Pilih platform"></div>
+    <div class="cn-padd" id="cnPAdd" hidden><input class="inp" id="cnPNew" autocomplete="off" placeholder="Nama platform baru"><button type="button" class="pbtn" id="cnPNewBtn">＋ Tambah</button></div>
+    <small class="cn-ph-hint" id="cnPHint" hidden>Ketuk platform untuk menghapusnya dari daftar</small>
+    <small>Deskripsi</small>
+    <textarea class="inp cn-dinp" id="cnD" rows="3" placeholder="Tentang apa channel ini…"></textarea>
+    <small class="pl-msg" id="cnMsg"></small>
+    <div class="acts"><button class="btn" id="cnCancel">Batal</button><button class="btn pri" id="cnSave">Simpan</button></div>
+  </div>
+</div>
+<input type="file" id="cnFile" accept="image/*" hidden>
+<div id="cnPage" hidden>
+  <div class="calbox">
+    <div class="fm-scroll" id="cnBody">
+      <div class="fm-hero cn-hero kosong" id="cnHero">
+        <div class="fm-hbg" id="cnHbg"></div>
+        <img id="cnHimg" alt="" draggable="false" referrerpolicy="no-referrer">
+        <div class="gl-ph" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1zM8 3l4 5 4-5"/></svg></div>
+        <button type="button" class="ibtn back gl-back" id="cnBack" aria-label="Kembali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5"/><path d="M11.5 5.5L5 12l6.5 6.5"/></svg></button>
+      </div>
+      <div class="fm-info">
+        <h2 class="fm-nm" id="cnNm"></h2>
+        <span class="fm-yr cn-pl" id="cnPl" hidden></span>
+        <div class="fm-dw" id="cnDw"><textarea class="fm-desc" id="cnDesc" rows="1" readonly tabindex="-1" placeholder="Deskripsi channel · ketuk 3x untuk menulis" aria-label="Deskripsi channel"></textarea></div>
+        <small class="fm-dh">Ketuk di luar kotak untuk mengunci</small>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FORM TAMBAH / EDIT TOKOH FAVORIT & HALAMAN DETAIL TOKOH -->
+<div id="tkForm" hidden>
+  <div class="sheet">
+    <h3 id="tkFormT">Tambah tokoh</h3>
+    <div class="pl-fcv">
+      <button type="button" class="pl-cvbtn fm-cvbtn tk-cvbtn" id="tkCvBtn" aria-label="Pilih foto dari galeri"><img id="tkCvImg" alt="" hidden referrerpolicy="no-referrer"><span id="tkCvPh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0"/></svg></span><i>Galeri</i></button>
+      <div class="pl-fcvr"><small>Foto tokoh</small><input class="inp" id="tkCvUrl" type="url" inputmode="url" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="atau tempel link foto"><button type="button" class="pl-cvx" id="tkCvClr" hidden>Hapus cover</button></div>
+    </div>
+    <small>Nama tokoh *</small>
+    <input class="inp" id="tkT" autocomplete="off" placeholder="Nama tokoh">
+    <small>Bidang / peran</small>
+    <input class="inp" id="tkP" autocomplete="off" placeholder="Contoh: Ilmuwan, Presiden, Musisi">
+    <small>Deskripsi</small>
+    <textarea class="inp tk-dinp" id="tkD" rows="3" placeholder="Kenapa tokoh ini jadi favoritmu…"></textarea>
+    <small class="pl-msg" id="tkMsg"></small>
+    <div class="acts"><button class="btn" id="tkCancel">Batal</button><button class="btn pri" id="tkSave">Simpan</button></div>
+  </div>
+</div>
+<input type="file" id="tkFile" accept="image/*" hidden>
+<div id="tkPage" hidden>
+  <div class="calbox">
+    <div class="fm-scroll" id="tkBody">
+      <div class="fm-hero tk-hero kosong" id="tkHero">
+        <div class="fm-hbg" id="tkHbg"></div>
+        <img id="tkHimg" alt="" draggable="false" referrerpolicy="no-referrer">
+        <div class="gl-ph" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0"/></svg></div>
+        <button type="button" class="ibtn back gl-back" id="tkBack" aria-label="Kembali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5"/><path d="M11.5 5.5L5 12l6.5 6.5"/></svg></button>
+      </div>
+      <div class="fm-info">
+        <h2 class="fm-nm" id="tkNm"></h2>
+        <span class="fm-yr tk-pl" id="tkPl" hidden></span>
+        <div class="fm-dw" id="tkDw"><textarea class="fm-desc" id="tkDesc" rows="1" readonly tabindex="-1" placeholder="Deskripsi tokoh · ketuk 3x untuk menulis" aria-label="Deskripsi tokoh"></textarea></div>
+        <small class="fm-dh">Ketuk di luar kotak untuk mengunci</small>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FORM TAMBAH / EDIT LINK (Koleksi link) -->
+<div id="lkForm" hidden>
+  <div class="sheet">
+    <h3 id="lkFormT">Tambah link</h3>
+    <small>Link *</small>
+    <div class="lk-urow"><input class="inp" id="lkU" type="url" inputmode="url" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="https://…"><button type="button" class="pbtn" id="lkPaste">📋 Tempel</button></div>
+    <small>Judul (kosongkan = pakai nama situs)</small>
+    <input class="inp" id="lkT" autocomplete="off" placeholder="Judul link">
+    <small>Kategori</small>
+    <input class="inp" id="lkP" list="lkCats" autocomplete="off" placeholder="Contoh: Belajar, Hiburan, Tools"><datalist id="lkCats"></datalist>
+    <small>Catatan</small>
+    <textarea class="inp lk-dinp" id="lkD" rows="3" placeholder="Kenapa link ini disimpan…"></textarea>
+    <small class="pl-msg" id="lkMsg"></small>
+    <div class="acts"><button class="btn" id="lkCancel">Batal</button><button class="btn pri" id="lkSave">Simpan</button></div>
+  </div>
+</div>
+<!-- FORM TAMBAH / EDIT KUTIPAN -->
+<div id="kqForm" hidden>
+  <div class="sheet">
+    <h3 id="kqFormT">Tambah kutipan</h3>
+    <small>Isi kutipan *</small>
+    <textarea class="inp kq-qinp" id="kqQ" rows="4" placeholder="Tulis kutipan di sini…"></textarea>
+    <small>Penulis / sumber</small>
+    <input class="inp" id="kqA" autocomplete="off" placeholder="Contoh: Pramoedya Ananta Toer">
+    <small class="pl-msg" id="kqMsg"></small>
+    <div class="acts"><button class="btn" id="kqCancel">Batal</button><button class="btn pri" id="kqSave">Simpan</button></div>
+  </div>
+</div>
+<!-- FORM BADGE (Kenali aku) -->
+<div id="knBForm" hidden>
+  <div class="sheet">
+    <h3 id="knBT">Tambah badge</h3>
+    <div class="kn-bprev"><span class="kn-b" id="knBPrev">Badge</span></div>
+    <small>Teks badge *</small>
+    <input class="inp" id="knBIn" autocomplete="off" placeholder="Contoh: Desain, Memasak, Coding">
+    <small>Warna</small>
+    <div class="kn-sw" id="knSw" role="group" aria-label="Warna badge"></div>
+    <small class="pl-msg" id="knBMsg"></small>
+    <div class="acts"><button class="btn del" id="knBDel" hidden>Hapus</button><button class="btn" id="knBCancel">Batal</button><button class="btn pri" id="knBSave">Simpan</button></div>
+  </div>
+</div>
+<!-- HALAMAN CATATAN BADGE: tulis skill spesifik. Font (10), ukuran (kecil/sedang/besar), tebal/miring/garis bawah, list titik/angka/centang, rata teks -->
+<div id="knNote" hidden>
+  <div class="calbox">
+    <div class="calhead">
+      <button class="ibtn back" id="knNBack" aria-label="Kembali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5"/><path d="M11.5 5.5L5 12l6.5 6.5"/></svg></button>
+      <div class="kn-nh"><span class="kn-b" id="knNPill"></span><small>Catatan skill</small></div>
+      <button type="button" class="ibtn kn-pen" id="knPen" aria-label="Edit catatan"><svg class="i-pen" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg><svg class="i-ok" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button>
+    </div>
+    <div class="kn-tb" id="knTb" hidden>
+      <div class="kn-tr">
+        <button type="button" class="kn-fb" id="knFont" aria-haspopup="true" aria-label="Pilih font"><span id="knFontT">Poppins</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="kn-seg" id="knSize" role="group" aria-label="Ukuran huruf"><button type="button" data-s="2" aria-label="Kecil"><span style="font-size:.7rem">A</span></button><button type="button" data-s="3" aria-label="Sedang"><span style="font-size:.95rem">A</span></button><button type="button" data-s="5" aria-label="Besar"><span style="font-size:1.25rem">A</span></button></div>
+      </div>
+      <div class="kn-tr kn-t2">
+        <button type="button" data-c="bold" aria-label="Tebal"><b>B</b></button>
+        <button type="button" data-c="italic" aria-label="Miring"><i>I</i></button>
+        <button type="button" data-c="underline" aria-label="Garis bawah"><u>U</u></button>
+        <i class="kn-sep"></i>
+        <button type="button" data-c="ul" aria-label="List titik"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h12M9 12h12M9 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg></button>
+        <button type="button" data-c="ol" aria-label="List angka"><span class="kn-num">1.</span></button>
+        <button type="button" data-c="cl" aria-label="List centang"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 4.5h6v6h-6zM4.7 7.6l1.3 1.3 2.3-2.5M13 7.5h8M3.5 13.5h6v6h-6zM13 16.5h8"/></svg></button>
+        <i class="kn-sep"></i>
+        <button type="button" data-c="justifyLeft" aria-label="Rata kiri"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h11M3 18h15"/></svg></button>
+        <button type="button" data-c="justifyCenter" aria-label="Rata tengah"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M7 12h10M5 18h14"/></svg></button>
+        <button type="button" data-c="justifyRight" aria-label="Rata kanan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M10 12h11M6 18h15"/></svg></button>
+      </div>
+    </div>
+    <div class="kn-ed" id="knEd" contenteditable="false" role="textbox" aria-multiline="true" aria-label="Catatan" data-ph="Belum ada catatan. Ketuk ikon pensil untuk menulis." spellcheck="false"></div>
+  </div>
+</div>
+<div id="fmPage" hidden>
+  <div class="calbox">
+    <div class="fm-scroll" id="fmBody">
+      <div class="fm-hero kosong" id="fmHero">
+        <div class="fm-hbg" id="fmHbg"></div>
+        <img id="fmHimg" alt="" draggable="false" referrerpolicy="no-referrer">
+        <div class="gl-ph" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zM7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></svg></div>
+        <button type="button" class="ibtn back gl-back" id="fmBack" aria-label="Kembali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5"/><path d="M11.5 5.5L5 12l6.5 6.5"/></svg></button>
+      </div>
+      <div class="fm-info">
+        <h2 class="fm-nm" id="fmNm"></h2>
+        <span class="fm-yr" id="fmYr" hidden></span>
+        <div class="fm-dw" id="fmDw"><textarea class="fm-desc" id="fmDesc" rows="1" readonly tabindex="-1" placeholder="Deskripsi · ketuk 3x untuk menulis" aria-label="Deskripsi film"></textarea></div>
+        <small class="fm-dh">Ketuk di luar deskripsi untuk mengunci</small>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="gdAsk" hidden><div class="gd-sh"><h3 id="gdAskT">Data ditemukan di Drive</h3><p id="gdAskM"></p><button type="button" class="gd-g" id="gdAskA"><span>♻️ Pulihkan dari Drive</span></button><button type="button" class="gd-lk" id="gdAskB">Pakai data perangkat ini</button></div></div>
+<div id="toast"></div>
+
+<!-- KONFIRMASI (dipakai untuk semua aksi penting) -->
+<div id="cfm" hidden>
+  <div class="sheet cfmbox">
+    <h3 id="cfmT">Hapus?</h3>
+    <p id="cfmM"></p>
+    <div class="acts">
+      <button class="btn" id="cfmNo">Batal</button>
+      <button class="btn danger" id="cfmYes">Hapus</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
